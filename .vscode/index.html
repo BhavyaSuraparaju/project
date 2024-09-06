@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Bhavya Suraparaju</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Bhavya Suraparaju</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#certificates" onclick="toggleMenu()">Certificates</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="C:\Users\bhargav\OneDrive\Desktop\project\project\images\projectprofile.jpg" alt="BhavyaSuraparaju profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Bhavya Suraparaju</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('https://1drv.ms/b/c/77afccace6bdd0cd/EbRU4CZD0wJLrBRsd4XR0AIBfbB9PDFyanlJZ7UDKibGKQ?e=NtwXgo')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="data:image/png;base64,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"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BHjsJvcnwSyG1WEj%2BhZKt7A%3D%3D'"
+          />
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKgAAACUCAMAAAAwLZJQAAAAbFBMVEX///8XFRUAAAAUEhLLy8v6+voKBwfy8vIQDQ3Gxsbk5OT39/fe3t7v7+8FAADb29vV1dW+vr60tLSjo6McGho2NjZtbGxJSUmCgoJmZWWNjY1FRERcXFwpKCibm5tXV1d1dHQiISE+PT0vLy/HupwmAAAHp0lEQVR4nO1c2YKiMBCUDkdAQQQVRBCP///H5dAZIB0xoXH2gXqcXUOZdHeqD1ytFixYsGDBggULPoLje97WjeIGkbvdeL5j/TWpITZunB0TBj3Y52MWu5v/huzaTfP7vibGjB6YXf3RuOepu/5rjivL2+U1RT7g2GHLa7pl5P3lxvpRygGkHDuouKaR91c0s4QD/4Blu7OVyWb+91la/lE0yhGq1e6fvm0BZvbZkQvbCqn5RZrrrNCh2VK9pd8yACva69JsqfL4K+EqvH7uQTg4nML5eV4eMI1mDSiymWl6p6nb2YJDPmtU3d0JtrMFHKL5eMY8oOJpGDaPZ6LppFOcXQSD6yyByjmRHfsLkM/AtLoyqXlWTE/kLuWVM/CsmCYbWp7OeRaetfOTnv4s5/5kSnn6znw8a6Z0e3qdkWfF9EjFM56VZ8X0QsMzkmduNGBAcptuD/ZwB1STkB6rOikdfNp+UMg+QYfANT0+qqdpyKgqa4LHKb0OmcJhOs+LwLOx/bV5PNhqdz8L4JC7Tv3pTFh0sj4190My8MrO/CgHBTdrqhDPj4bDr8gMdxpPJx9S4Y/fAO27JQwN2GANhn/lkOx+46WfCHafOJOICgdfWWgvM6uk9NNWGy+BwDb2FQweQMfnGDx64tNKxXUnHb4vWuEw6DkxgzpfB34+pVkcRzu3wi6K4iw9JkbjdACXwe2DhGaYcpUiV5IY88wcgvxihp5wFTpeaMYnBolggDvROOCqz9M1hOXYXrR6a/M2T8f+OXyIK/OdLs81okUYSWxeeXcxCsNJ159MJE7yw5aCqJ+IRBnobikmlmckagQPvcW2WDQnIuqdsQsY9Cp9qAolstENYqO6yjR8YGsxQ9s3uzALTCawQmcXxEup/dYk9Y1IsriGhPYl+fF0nVNDsgtBop4/mRJhpLOWAGnVRcOdZAkdBwK3926C6HoSVXcnmSiGlKCvYUmOvgr6qkuhQbTmeaLpv8gOTPnshWTh9Y2pqgWSw4dUbRkrx0u2VCl4JfRw27JLtRPbHtAcE0qy8ouFHz5XvPkifEMDwrq7e0O3VLEYgXulTRFDf4DHUjXjWuPnQmehNXb4M64qbT3vjPokTEtph0Ddyb6rJHneHvMl+0bKc4WqCcZUiuX4RU+jR36BSyilkC9ZYmLZZQihsNM+RcXt0XuJUciRLrwbKvNVzg11el4QN4XEClRD9KqwRIIRtc/EfTa8hwGJwhIF+lWpG4J4tLb3CkvgVq5dyVAiqiRJcaf/zo4ak4kGdNJpXqK0kmQlbQhOJ6p0C38ASUY+mSh5HJVJn6lEGSfurXsFnkaoEMXFN/FY3TZAC1AqRPf4mRAPAOEaTSngo1eocio7BrxrrXSF4gHO1qwIyyA021qiV4UlJOUH5XrLe0g8QUXmycqXpEOKvuQhKp4gqTnSGqmsUqwSWzb40INdUuonvGqkFq29OxqfiAr4LfAyvuJFLdE1NMXRJ2QOq1SAkNkPN8jyOw9tuihXYyRuTzijJNlQ1etPUnaki1CerEWg2Blcl7JuAI3MX8vaInapOPouzlK8mM7ZZ9II1bI2U6XCCFp3kXQQSV1KSgeF2PQSlCkf7lKXE/KJZs4m6tIdWnNqeZ6UV5Oefd28yybEfevyZlhOI4nw8Vu0AYOrdvq0EQbzOrDvGjGl55jMDnoDjnDTLOdfindTclpNgrAjGuBWnso9dOQOh0L9HTovKt7OSOoNFnTcyS5d3/HM+Nw9NRvOFxWLsszLXZzk62+ouivVcH+IwrV1nvWl9yQbbucs/MivLDM73EZo6tfef/uqP9fRtp+fNoODZRaZ241EUjubrRmlST2iNzpsahd6PLsdK8ieBumJ713VY423Qkb0cav/fYxju5CuLO8WseDwPJYQ619zuTjbfTxiPEHv7DrHZb++7w4ZxH6nVKT6Y4AJQ4Qrq3uPMvZcSExT3opIbF4Q3dApsxWbLif71trpWjjM98UNqWIcLDKpVth7yGsI3TUGTN/LfpmYH6wxrWbgJd3k++Uy8eC6HtFmn0zBB8nEKnFP4v5U8aPeywkwUjz74B04grcwetnij7oP8+dIeB3yHyOa/wO/J0hw1kXn8CF/xXVnd300P/TwOEZjSgIfdegdfEHwNnM3b2AdYbv2N2EYev74I95o8BacpujeNVOtt0/GiBK9JrSyumaqs+YY0UmZTQ+dN4XYXv2URojCnYhmXTf5fZStXnp8TxRUayPv4HX21IZIceW3RIG2cel38iUOpZoSf0c0IBuffKK7p0Yd40Ov+UUfq4pS5siz3hAl3s8a2967d9V9dD6mWZal17wYS3XkROFOPPhTw+FiutRgNFxLiQInHv5ogb2M0z5vhKgr+9xxpp8BcS56XWd8RxlcZtnPBjGaT2oRBZpXJGTY5simjjkTcvQM8hncqAsnFesd6jZqQzrfsf889ia80Ku4owxuxHOTEqSD0qEiUSiIBxTkCFMIdIkGkH7hF39esNwz/E6ufE6UBXB2v/wbWmG5f+UonxLlsC+/uJsvWG5mN1TZWNuxHRHmwLNv7+YT1iau3+x/lXnl/+/aSIL4T3+TMLykH4QaN738wZkvWLBgwYIFC1arf3BqX2QcUOvVAAAAAElFTkSuQmCC"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/BhavyaSuraparaju/project.git'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      
+    
+            
+          
+          <div class="text-container">
+            <p>
+              I am currently a 4th-year student at Vasireddy Venkatadri Institute of Technology,
+              pursuing a btech in Artificial Intelligence and Data Science. I am passionate about learning 
+              new technologies and am constantly seeking opportunities to expand my knowledge
+              and I strive to grow both personally and professionally each day.
+            </p>
+          </div>
+        
+    <section id="certificates">
+      <h1 class="title">Certificates</h1>
+      <div class="btn-container">
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('https://1drv.ms/b/c/77afccace6bdd0cd/EVwO32TwlyVFldYeFxTLbQIBBJ2JtOcgtdqIiy44nhU-RQ?e=t4YIqU')"
+        >
+          Google Cloud Certificate
+        </button>
+        
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('https://1drv.ms/b/c/77afccace6bdd0cd/EbtTgvGH2qtPrxrmWmdrVmMBcQY8Xv_Zn3ZbyTri1mcqDQ?e=mYE2cn')"
+        >
+          Data Science Certificate by IES
+        </button>
+        <button
+          class="btn btn-color-2"
+          onclick="window.open('https://1drv.ms/b/c/77afccace6bdd0cd/ESyR3PU4Iu5Ai3n8spbBEhwBQImP8wx5eHPwXr7dBMQiGA?e=ufjdx8')"
+        >
+          Data Engineering Certificate by AICTE
+        </button>
+      </div>
+      
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="projects-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            
+            <h2 class="experience-sub-title project-title">Portfolio</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/BhavyaSuraparaju/project.git'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/BhavyaSuraparaju/project.git'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAV1BMVEX///8AAAC+vr49PT21tbXj4+Pq6urm5uYODg45OTn29va7u7s0NDTu7u7x8fEICAiWlpba2trKyspHR0ccHBx4eHhaWlpVVVVhYWEoKCjT09MtLS1PT09BlHqHAAACHUlEQVR4nO2cTXOCQBBEWSBGPpIAahIT///vjAeToMLUnOy3VdNnD12PdXZ6WaYoPGqnYbff9odu4/r5QzS9p4uqQe3lV0Oa6YMB68pTSn2rNnRWl27UPKktFW1zayr1r2pT9Z2n83JXs/pcMJWaF6mnTbVkKlXPSlPjcdFUqpSsvvbLpqSsxu8VU6nSVdF2t2ZKyeqwakrIalo3JXS1WKjUrsYt0ZX1AHWrfWn7+3el2p3LN8OVrJMxWTUqVp212qGsVB1yabHqkaxkaSJY+WX+B2Ws7jIgn5WsXpmsZLW9RrIq82Ml669MVrKUWlv9FZSVqm+3O2SVq2Dll1nboclLVRnsdRWs5rJTKpOVLNEjO5lIqX4xkxeTVYbJK1hdu0LWqwxTKjRNyJJXsHIrUqpfzOQVrPzKMXnJ0oTl6qTqGUxWsht0ZkqVXRywWOkuGxpp4iQzZbCSNe2Fsa6OY5iai/j4iAudWBKIxZO4zRA3ZGLrQmzyiO0wMTgEJ5+IsZ14wEE8CgpOPhEPYolH1sTDfeJrECIn4qs14kvI7DiJXmwTrwAgMwKwfyJewMkvS2k4Ea+/RZbyKTj5FJnTJ2KWIn5OQPzwIjKn05PFKTLnnyJL+RScfCJmTmJ9In5GTvzgnpjNiUMckOMuiINBkCNUiMNmkGN5kAOMmKOeiEOxkOPDkIPWmCPpkMP7kGMOmQMhmaMzmUNGHz6O9QfG3B+zs0oSugAAAABJRU5ErkJggg=="
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="data:image/png;base64,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"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:bhavyasuraparaju@gmail.com">bhavyasuraparaju@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3BNSeks360QE%2BQS7idkp7rag%3D%3D">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#certificates">Certificate</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Bhavya Suraparaju. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
